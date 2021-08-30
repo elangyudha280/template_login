@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bungkus {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  -webkit-display: grid;
+
+  grid-template-columns: 50% 50%;
+  padding: 5px;
+  overflow-x: hidden;
+  background: rgba(204, 204, 204, 0.3);
+}
+
+.gambar-kiri {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(160, 0, 240, 0.6);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gambar-kiri img {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  filter: brightness(1.25) contrast(1.1);
+  -webkit-filter: brightness(1.25) contrast(1.1);
+  -ms-webkit-filter: brightness(1.25) contrast(1.1);
+  -o-webkit-filter: brightness(1.25) contrast(1.1);
+  -moz--webkit-filter: brightness(1.25) contrast(1.1);
+}
+
+/* code bagian grid kananya */
+
+.grid-kanan {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* judul nav */
+.judul-nav {
+  z-index: 10;
+  position: absolute;
+  padding: 12px 25px;
+  width: 100%;
+  height: 50px;
+  top: 20px;
+  right: 0;
+  text-transform: capitalize;
+  text-align: right;
+}
+/* judul nav */
+
+/* code form bungkus */
+
+.grid-kanan .form {
+  position: relative;
+  width: 100%;
+  /* top: 50px; */
+
+  padding: 0 40px;
+}
+
+.form .desc-judul {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* code input from */
+.form .input-form {
+  max-width: 70%;
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+}
+.input-form .ussername,
+.password {
+  text-transform: capitalize;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1em;
+  padding-right: 20px;
+}
+.input-form .password {
+  padding-right: 55px;
+}
+.input-form .ps-bungkus {
+  width: 100%;
+  position: relative;
+  top: 10px;
+}
+
+.input-form .eye-open {
+  position: absolute;
+  bottom: 0.8em;
+  font-size: 1.2em;
+  cursor: pointer;
+  right: 1.2em;
+  visibility: visible;
+}
+.input-form i.eye-open-active {
+  visibility: hidden;
+}
+.input-form .eye-close {
+  position: absolute;
+  visibility: hidden;
+  bottom: 0.8em;
+  font-size: 1.2em;
+  cursor: pointer;
+  right: 1.2em;
+}
+.input-form i.eye-close-active {
+  visibility: visible;
+}
+.input-form a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.input-form .btn-sign {
+  margin: 0 auto;
+  width: 100%;
+  background: orange;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: none;
+  height: 50px;
+}
+
+/* code login dengan lain */
+
+.input-form .login-lain {
+  position: relative;
+  width: 100%;
+
+  margin-top: 10px;
+}
+.input-form .login-lain p {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.input-form .login-lain .login-pilih {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 0px 12px;
+  justify-items: center;
+  align-items: center;
+  padding: 5px;
+}
+.login-lain .login-pilih .mac,
+.facebook,
+.twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  transform-origin: bottom top;
+  font-size: 2em;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+.login-lain .login-pilih i {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+.mac:hover,
+.facebook:hover,
+.twitter:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  box-shadow: 5px 5px 10px #596779, -5px -5px 10px #dbfdff;
+}
+.facebook:hover i {
+  color: #3b5998;
+}
+.twitter:hover i {
+  color: #00acee;
+}
+/* code login dengan lain */
+/* code input from */
+
+/* code from bungkus */
+
+/* akhir code bagian grid kanany */
+
+/* min widdth 2000px */
+@media only screen and (min-width: 2000px) {
+  .form .input-form {
+    max-width: 600px;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+/* code bagian tablet */
+@media only screen and (max-width: 1024px) {
+  .bungkus {
+    grid-template-columns: 100%;
+  }
+  .gambar-kiri {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(160, 0, 240, 0.6);
+    border-radius: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+  .gambar-kiri img {
+    position: relative;
+    bottom: -100px;
+  }
+  .judul-form,
+  .desc-judul,
+  .or,
+  .re {
+    color: #fff;
+  }
+  .judul-nav p {
+    color: #fff;
+  }
+  .facebook:hover i {
+    color: #fff;
+  }
+  .twitter:hover i {
+    color: #fff;
+  }
+  .mac:hover i {
+    color: #fff;
+  }
+}
+
+/* code tablet 2 */
+@media only screen and (max-width: 560px) {
+  .grid-kanan .form {
+    position: relative;
+    width: 100%;
+    top: 30px;
+    padding: 0 0px;
+  }
+  .form .input-form {
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+
+    margin: 0 auto;
+  }
+  .form .input-form {
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .gambar-kiri img {
+    position: relative;
+    bottom: -30px;
+  }
+}
+
+/* code bagian landscape */
+
+@media only screen and (orientation: landscape) and (max-width: 900px) and (max-height: 450px) {
+  .gambar-kiri {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background: rgba(160, 0, 240, 0.6);
+    border-radius: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+
+  .grid-kanan .form {
+    position: relative;
+    width: 100%;
+    top: 100px;
+
+    padding: 0 40px;
+  }
+}
+
+/* code mobile ip */
+@media only screen and (width: 320px) and (height: 480px) {
+  .gambar-kiri {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: rgba(160, 0, 240, 0.6);
+    border-radius: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+  .grid-kanan .form {
+    position: relative;
+    width: 100%;
+    top: 90px;
+
+    padding: 0;
+  }
+}
+
+@media only screen and (width: 240px) and (height: 320px) {
+  .judul-nav {
+    z-index: 10;
+    position: absolute;
+    padding: 12px 0px;
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    right: 0;
+    text-transform: capitalize;
+    text-align: right;
+  }
+  .gambar-kiri {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background: rgba(160, 0, 240, 0.6);
+    border-radius: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+  .grid-kanan .form {
+    position: relative;
+    width: 100%;
+    top: 100px;
+
+    padding: 0 0px;
+  }
+}
+
+/* code layar > 3500px  */
+@media only screen and (min-width: 3500px) {
+  .gambar-kiri img {
+    position: relative;
+    width: 100%;
+    max-height: 900px;
+  }
+}
